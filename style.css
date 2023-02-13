@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root {
+    --menu-bg-color: black;
+    --menu-icons-color: white;
+    --menu-hl-icons-color: crimson;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Noto Sans";
+    background: var(--menu-bg-color);
+    color: var(--menu-icons-color);
+    margin-bottom: 70px;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.content img {
+    height: 600px;
+    width: auto;
+    flex-grow: 0;
+    flex-basis: 0;
+}
+
+.content .page-title {
+    font-size: 1.8rem;
+}
+
+.mobile-menu {
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 0px solid var(--menu-hl-icons-color);
+    width: 100%;
+    background: var(--menu-bg-color);
+}
+
+.mobile-menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-menu button {
+    padding: 20px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.mobile-menu svg {
+    stroke: var(--menu-icons-color); 
+    height: 30px;
+    width: 30px;
+    transition: stroke 300ms ease-in-out;
+    pointer-events: none;
+}
+
+.mobile-menu button:hover svg {
+    stroke: var(--menu-hl-icons-color);
+}
+
+.mobile-menu button:active svg {
+    fill: var(--menu-hl-icons-color);
+}
+
+.active-page svg {
+    fill: var(--menu-hl-icons-color);
+    stroke: var(--menu-hl-icons-color);
+}
